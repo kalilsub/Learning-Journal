@@ -1,0 +1,167 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;  
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    background-image: url("../images/hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4em 1.25em;
+    
+}
+
+main {
+    margin: 0 1.25em;
+}
+
+/* ======== TYPOGRAPHY ======== */
+
+h1,
+h2 {
+    margin: 0.5em 0;
+    font-weight: 700;
+    color: #141414;
+}
+
+p {
+    line-height: 1.2;
+    color:#505050 ;
+    font-size: 1.125rem;
+}
+
+.hero-title,
+.hero-text,
+.hero-date {
+    color: white;
+    margin: 0.25em 0;
+}
+
+.hero-title {
+    font-size: 2.125rem;
+}
+
+.hero-text {
+    font-size: 1.125rem;
+}
+
+.hero-date {
+    font-size: 1rem;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+}
+
+.blog-date {
+    font-size: 1rem;
+    color: #202020;
+    text-transform: uppercase;
+}
+
+
+
+footer {
+    background-color: #202020;
+    padding: 2.2em 0;
+    text-align: center;
+    margin: 0;
+}
+
+.footer-text {
+    margin-bottom: 0;
+    color: #ECECEC;
+    font-size: 1rem;
+}
+.copyright {
+    color: #D7D7D7;
+    font-size: 0.8rem;
+    margin-top: 1px;
+}
+
+
+/* ========= LAYOUT ======== */
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-date {
+    order: -1;
+}
+/* Nav */
+
+nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 1em 1.25em;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding:0  1em;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    border-bottom: solid black 2px;
+    color: #505050;
+}
+
+
+/* Main */
+
+main img {
+    width: 100%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+}
+
+.blog-img {
+    order: -5;
+}
+
+.blog-date {
+    order: -1;
+    margin: 0.5em 0;
+}
+
+.blog-title {
+    text-align: start;
+    margin: 0;
+}
+
+.blog-content {
+    margin: 0.5em 0;
+}
+
+
+
