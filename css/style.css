@@ -8,18 +8,24 @@ body {
     margin: 0;
     padding: 0;
     max-width: 100%;
+    /* min-width: 430px; */
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-header {
+.feature-post {
     background-image: url("../images/hero.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    padding: 4em 1.25em;
-    
+    background-repeat: no-repeat; 
+    padding: 4em 1.25em; 
+    display: flex;
+    flex-direction: column;
 }
 
-main {
+.feature-post:hover {
+    cursor: pointer;
+}
+
+.grid{
     margin: 0 1.25em;
 }
 
@@ -35,7 +41,7 @@ h2 {
 p {
     line-height: 1.2;
     color:#505050 ;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 .hero-title,
@@ -45,24 +51,30 @@ p {
     margin: 0.25em 0;
 }
 
+nav li {
+    font-size: 0.75rem;
+}
+
 .hero-title {
     font-size: 2.125rem;
 }
 
 .hero-text {
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 .hero-date {
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
+
+
 
 .blog-title {
     font-size: 1.5rem;
 }
 
 .blog-date {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     color: #202020;
     text-transform: uppercase;
 }
@@ -79,7 +91,8 @@ footer {
 .footer-text {
     margin-bottom: 0;
     color: #ECECEC;
-    font-size: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
 }
 .copyright {
     color: #D7D7D7;
@@ -87,15 +100,55 @@ footer {
     margin-top: 1px;
 }
 
+/* Linked Documents */
+
+.feature-post-page {
+    margin: 1.5em 1.25em;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-post-page .hero-date {
+    font-size: 0.9rem;
+
+    
+    
+}
+
+.feature {
+    color: #151515;
+    margin: 0.5em 0;
+    
+     
+}
+
+
+.feature-img {
+    margin: 1.2em 0;
+    min-width: 100%;
+    
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.about-me-img {
+    width: 182px;
+
+}
+
 
 /* ========= LAYOUT ======== */
 
 /* Header */
-header {
+.hero-content {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1em;
     
 }
+
 
 .hero-date {
     order: -1;
@@ -109,17 +162,18 @@ nav {
     text-transform: uppercase;
     padding: 1em 1.25em;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0;
+    margin: 3px;
+    align-items: center;
 }
 
 li {
     padding:0  1em;
     font-weight: 600;
-    font-size: 0.9rem;
 }
 
 a {
@@ -136,11 +190,9 @@ a:focus {
 
 /* Main */
 
-main img {
-    width: 100%;
-}
 
-article {
+
+.grid article {
     display: flex;
     flex-direction: column;
     margin: 2em 0;
@@ -148,11 +200,12 @@ article {
 
 .blog-img {
     order: -5;
+    object-fit: cover;
 }
 
 .blog-date {
     order: -1;
-    margin: 0.5em 0;
+    margin: 0.8em 0;
 }
 
 .blog-title {
@@ -169,30 +222,104 @@ article {
 /* Media Queries */
 
 @media (min-width: 650px) {
-    nav {
-        margin: 1em;
+    body{
+        width: 100vw;
     }
 
-    header {
-        padding: 5em 2em;
-        
+    nav {
+        margin: 0;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .logo-img {
+        width: 207px;
+    }
+
+    .feature-post {
+        padding: 2em 2em;
+        min-height: 50%;
         align-items: flex-start;
         justify-content: end;
+        background-position: center center;
         
     }
+    .feature-post-page {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
+    
 
     .hero-text {
-        max-width: 610px;
+        max-width: 800px;
     }
 
-    main {
+    .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1.5em;
         margin: 2em ;
+        max-width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
-    article {
+    .grid article {
         margin: 0;
+    }
+    
+
+    /* Typography for big screens */
+
+    nav li {
+        font-size: 1rem;
+    }
+    
+
+    .hero-title {
+        font-size: 2.7em;
+    }
+
+    .hero-date {
+        font-size: 1rem;
+    }
+
+    /* Linked Documents/Pages */
+
+
+    .hero-content {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 3em;
+        max-width: 1200px;
+    }
+
+    .feature-img {
+        width: 90%;
+        max-height: 50vh;
+        object-fit: cover;
+    }
+    .feature-post-page .hero-date {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px ;
+    }
+
+
+    .hero-content-inner {
+        margin-left: 2em;
+    }
+    .hero-title {
+        max-width: 800px;
+    }
+    
+    .feature,.hero-content {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
