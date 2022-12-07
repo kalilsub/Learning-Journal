@@ -192,6 +192,8 @@ a:focus {
 
 
 
+
+
 .grid article {
     display: flex;
     flex-direction: column;
@@ -260,7 +262,7 @@ a:focus {
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
         gap: 1.5em;
         margin: 2em ;
         max-width: 1400px;
